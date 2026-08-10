@@ -16,6 +16,7 @@ export default class Renderer {
         this.renderer = new THREE.WebGLRenderer({
             canvas: this.canvas,
             antialias: true,
+            powerPreference: "high-performance",
         });
 
         this.renderer.physicallyCorrectLights = true;
@@ -23,37 +24,22 @@ export default class Renderer {
         this.renderer.toneMapping = THREE.CineonToneMapping;
         this.renderer.toneMappingExposure = 1.75;
         this.renderer.shadowMap.enabled = true;
-        this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        // PCFShadowMap is significantly faster than PCFSoftShadowMap while looking virtually identical
+        this.renderer.shadowMap.type = THREE.PCFShadowMap;
         this.renderer.setSize(this.sizes.width, this.sizes.height);
-        this.renderer.setPixelRatio(this.sizes.pixelRatio);
+        
+        // Cap pixel ratio at 1.5 to save ~45% GPU fragment rendering cost on 4K/Retina displays
+        const cappedDPR = Math.min(this.sizes.pixelRatio, 1.5);
+        this.renderer.setPixelRatio(cappedDPR);
     }
 
     resize() {
         this.renderer.setSize(this.sizes.width, this.sizes.height);
-        this.renderer.setPixelRatio(this.sizes.pixelRatio);
+        const cappedDPR = Math.min(this.sizes.pixelRatio, 1.5);
+        this.renderer.setPixelRatio(cappedDPR);
     }
 
     update() {
-        // this.renderer.setViewport(0, 0, this.sizes.width, this.sizes.height);
         this.renderer.render(this.scene, this.camera.orthographicCamera);
-        // Second Screen
-        // this.renderer.setScissorTest(true);
-        // this.renderer.setViewport(
-        //     this.sizes.width - this.sizes.width / 3,
-        //     this.sizes.height - this.sizes.height / 3,
-        //     this.sizes.width / 3,
-        //     this.sizes.height / 3
-        // );
-
-        // this.renderer.setScissor(
-        //     this.sizes.width - this.sizes.width / 3,
-        //     this.sizes.height - this.sizes.height / 3,
-        //     this.sizes.width / 3,
-        //     this.sizes.height / 3
-        // );
-
-        // this.renderer.render(this.scene, this.camera.perspectiveCamera);
-
-        // this.renderer.setScissorTest(false);
     }
 }

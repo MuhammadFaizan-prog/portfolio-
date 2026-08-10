@@ -28,30 +28,44 @@ export default class Resources extends EventEmitter {
         this.loaders.dracoLoader.setDecoderPath("/draco/");
         this.loaders.gltfLoader.setDRACOLoader(this.loaders.dracoLoader);
     }
+
     startLoading() {
         for (const asset of this.assets) {
             if (asset.type === "glbModel") {
-                this.loaders.gltfLoader.load(asset.path, (file) => {
-                    this.singleAssetLoaded(asset, file);
-                });
+                this.loaders.gltfLoader.load(
+                    asset.path,
+                    (file) => {
+                        this.singleAssetLoaded(asset, file);
+                    },
+                    undefined,
+                    (error) => {
+                        console.error(`Error loading model ${asset.path}:`, error);
+                    }
+                );
             } else if (asset.type === "videoTexture") {
-                this.video = {};
-                this.videoTexture = {};
+                this.video = this.video || {};
+                this.videoTexture = this.videoTexture || {};
 
-                this.video[asset.name] = document.createElement("video");
-                this.video[asset.name].src = asset.path;
-                this.video[asset.name].muted = true;
-                this.video[asset.name].playsInline = true;
-                this.video[asset.name].autoplay = true;
-                this.video[asset.name].loop = true;
-                this.video[asset.name].play();
+                const videoEl = document.createElement("video");
+                videoEl.src = asset.path;
+                videoEl.muted = true;
+                videoEl.playsInline = true;
+                videoEl.autoplay = true;
+                videoEl.loop = true;
+                videoEl.setAttribute("preload", "metadata");
+
+                this.video[asset.name] = videoEl;
+
+                // Play video non-blockingly
+                videoEl.play().catch(() => {
+                    // Autoplay fail-safe
+                });
 
                 this.videoTexture[asset.name] = new THREE.VideoTexture(
                     this.video[asset.name]
                 );
-                // this.videoTexture[asset.name].flipY = false;
-                this.videoTexture[asset.name].minFilter = THREE.NearestFilter;
-                this.videoTexture[asset.name].magFilter = THREE.NearestFilter;
+                this.videoTexture[asset.name].minFilter = THREE.LinearFilter;
+                this.videoTexture[asset.name].magFilter = THREE.LinearFilter;
                 this.videoTexture[asset.name].generateMipmaps = false;
                 this.videoTexture[asset.name].encoding = THREE.sRGBEncoding;
 
