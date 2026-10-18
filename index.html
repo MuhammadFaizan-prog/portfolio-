@@ -1,420 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, target-densityDpi=device-dpi, minimal-ui"
-    />
-    <title>Muhammad Faizan</title>
-    <meta property="og:title" content="Muhammad Faizan" />
-    <meta name="description" content="Muhammad Faizan 3D Portfolio" />
-    <meta property="og:description" content="Muhammad Faizan 3D Portfolio" />
-    <meta
-      property="og:url"
-      content="https://mdamiruddin-3dportfolio.vercel.app"
-    />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/MdAmiruddin/mdamiruddin-3dportfolio/main/public/social/screenshot.png"
-    />
-    <link rel="preload" href="/models/Finale Version 16.glb" as="fetch" type="application/octet-stream" crossorigin />
-  </head>
-  <body class="light-theme">
-    <div class="experience">
-      <canvas class="experience-canvas"></canvas>
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Muhammad Faizan · Agentic AI & Full-Stack Engineer</title>
+<meta name="description" content="Muhammad Faizan, Agentic AI and Full-Stack Engineer in Lahore. Built the AI Driving Test System for Punjab Police and 15+ production apps for clients in Pakistan, the US, the UK and Israel.">
+<meta property="og:title" content="Muhammad Faizan · Agentic AI & Full-Stack Engineer">
+<meta property="og:description" content="AI agents, full-stack apps and the AI Driving Test System for Punjab Police.">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/130775084?v=4">
+<link rel="icon" href="https://avatars.githubusercontent.com/u/130775084?v=4">
+<link rel="stylesheet" href="/style.css">
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="logo" href="#">faizan<span>.</span></a>
+  <div class="links">
+    <a href="#work">work</a><a href="#experience" class="hide">experience</a><a href="#stack" class="hide">stack</a>
+    <a href="https://github.com/MuhammadFaizan-prog" target="_blank" rel="noopener">github</a>
+    <a href="https://www.linkedin.com/in/muhammad-faizan-60518a290/" target="_blank" rel="noopener" class="hide">linkedin</a>
+    <button id="theme" aria-label="Toggle theme">◐</button>
+  </div>
+</div></nav>
+
+<main class="wrap">
+<section class="hero reveal">
+  <div class="hero-top">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/130775084?v=4" alt="Muhammad Faizan">
+    <span class="hand">hey, i'm faizi 👋</span>
+  </div>
+  <h1>I am Muhammad Faizan</h1>
+  <div class="sub">I build AI agents that do the work, and the apps around them.</div>
+  <p>I'm a <b>Software Engineer at Munexa Design</b> in Lahore, where I build conversational AI that talks by text and voice and then actually takes action: filling forms, calling tools, finishing the task instead of just answering.</p>
+  <p>Before that I spent almost two years at Dexterz Technologies shipping <b>15+ production apps</b> with React, Node.js and Supabase. The one I'm proudest of is the <b>AI Driving Test System for Punjab Police</b>: I architected its admin dashboard, wired in the fingerprint scanners and printers, and kept the data in sync with the government's DLIMS reporting. It was showcased at <b>Punjab Transport Expo 2025</b>.</p>
+  <p>My clients have been in Pakistan, the US, the UK and Israel: an education platform with three portals, a real-time inventory system, and sites for a New York dental group and a US skincare brand. These days I'm deep in LangGraph, RAG, MCP and voice agents.</p>
+  <div class="stats">
+    <div><b>2+ yrs</b><span>professional experience</span></div>
+    <div><b>15+</b><span>production apps</span></div>
+    <div><b>4</b><span>countries served</span></div>
+    <div><b>Expo '25</b><span>Punjab Transport Expo</span></div>
+  </div>
+  <div class="btns">
+    <a class="btn primary" href="#work">View my work</a>
+    <a class="btn" href="https://qualzo.app/chat/cmt01ewgm00wgjqtgc8agi1cq" target="_blank" rel="noopener">Talk to my AI agent ↗</a>
+    <a class="btn" href="https://www.youtube.com/watch?v=yJV395NlWko" target="_blank" rel="noopener">Driving test demo ↗</a>
+    <a class="btn" href="https://github.com/MuhammadFaizan-prog" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+</section>
+
+<section id="work" class="reveal">
+  <h2>Things I built</h2>
+  <p class="lede">Real projects with real users: government, clients abroad, and my own experiments.</p>
+  <div class="grid">
+    <div class="card feature">
+      <div class="video"><iframe src="https://www.youtube-nocookie.com/embed/yJV395NlWko" title="AI Driving Test System demo" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="k"><span>Government · Punjab Police</span><span>Dexterz Technologies</span></div>
+      <h3>AI Automatic Driving Test System</h3>
+      <p>An AI-based driving test platform running at multiple test stations. I built the full admin dashboard, integrated fingerprint authentication and printers with the vehicle test system, and managed the Supabase/PostgreSQL workflows that keep sensor inputs, dashboard records and DLIMS reporting consistent in real time.</p>
+      <span class="tag">React · Node.js · Supabase · PostgreSQL · Hardware</span>
     </div>
-
-    <!-- Preloader -->
-    <div class="preloader">
-      <div class="preloader-wrapper">
-        <div class="loading">
-          <div class="circle"></div>
-          <div class="circle"></div>
-          <div class="circle"></div>
-        </div>
-      </div>
+    <a class="card" href="https://qualzo.app/chat/cmt01ewgm00wgjqtgc8agi1cq" target="_blank" rel="noopener">
+      <div class="k"><span>AI agent</span><span>Try it ↗</span></div>
+      <h3>My AI agent</h3>
+      <p>A conversational agent trained on my work. Ask it about my projects, stack or availability, and it answers like I would.</p>
+      <span class="tag">LLMs · RAG · Tool calling</span>
+    </a>
+    <div class="card">
+      <div class="k"><span>Munexa Design</span><span>2026</span></div>
+      <h3>Text and voice action agent</h3>
+      <p>An AI agent that talks by text or voice, collects details through natural conversation, and fills web forms automatically. Custom actions go beyond a normal chatbot.</p>
+      <span class="tag">Voice AI · STT/TTS · Agents</span>
     </div>
-
-    <div class="page" asscroll-container>
-      <div class="toggle-bar">
-        <div class="sun-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-            <path
-              fill="currentColor"
-              d="M12 5Q11.575 5 11.288 4.712Q11 4.425 11 4V2Q11 1.575 11.288 1.287Q11.575 1 12 1Q12.425 1 12.713 1.287Q13 1.575 13 2V4Q13 4.425 12.713 4.712Q12.425 5 12 5ZM16.95 7.05Q16.675 6.775 16.675 6.362Q16.675 5.95 16.95 5.65L18.35 4.225Q18.65 3.925 19.062 3.925Q19.475 3.925 19.775 4.225Q20.05 4.5 20.05 4.925Q20.05 5.35 19.775 5.625L18.35 7.05Q18.075 7.325 17.65 7.325Q17.225 7.325 16.95 7.05ZM20 13Q19.575 13 19.288 12.712Q19 12.425 19 12Q19 11.575 19.288 11.287Q19.575 11 20 11H22Q22.425 11 22.712 11.287Q23 11.575 23 12Q23 12.425 22.712 12.712Q22.425 13 22 13ZM12 23Q11.575 23 11.288 22.712Q11 22.425 11 22V20Q11 19.575 11.288 19.288Q11.575 19 12 19Q12.425 19 12.713 19.288Q13 19.575 13 20V22Q13 22.425 12.713 22.712Q12.425 23 12 23ZM5.65 7.05 4.225 5.65Q3.925 5.35 3.925 4.925Q3.925 4.5 4.225 4.225Q4.5 3.95 4.925 3.95Q5.35 3.95 5.625 4.225L7.05 5.65Q7.325 5.925 7.325 6.35Q7.325 6.775 7.05 7.05Q6.75 7.325 6.35 7.325Q5.95 7.325 5.65 7.05ZM18.35 19.775 16.95 18.35Q16.675 18.05 16.675 17.638Q16.675 17.225 16.95 16.95Q17.225 16.675 17.638 16.675Q18.05 16.675 18.35 16.95L19.775 18.35Q20.075 18.625 20.062 19.05Q20.05 19.475 19.775 19.775Q19.475 20.075 19.05 20.075Q18.625 20.075 18.35 19.775ZM2 13Q1.575 13 1.288 12.712Q1 12.425 1 12Q1 11.575 1.288 11.287Q1.575 11 2 11H4Q4.425 11 4.713 11.287Q5 11.575 5 12Q5 12.425 4.713 12.712Q4.425 13 4 13ZM4.225 19.775Q3.95 19.5 3.95 19.075Q3.95 18.65 4.225 18.375L5.65 16.95Q5.925 16.675 6.338 16.675Q6.75 16.675 7.05 16.95Q7.35 17.25 7.35 17.663Q7.35 18.075 7.05 18.375L5.65 19.775Q5.35 20.075 4.925 20.075Q4.5 20.075 4.225 19.775ZM12 18Q9.5 18 7.75 16.25Q6 14.5 6 12Q6 9.5 7.75 7.75Q9.5 6 12 6Q14.5 6 16.25 7.75Q18 9.5 18 12Q18 14.5 16.25 16.25Q14.5 18 12 18ZM12 16Q13.65 16 14.825 14.825Q16 13.65 16 12Q16 10.35 14.825 9.175Q13.65 8 12 8Q10.35 8 9.175 9.175Q8 10.35 8 12Q8 13.65 9.175 14.825Q10.35 16 12 16Z"
-            />
-          </svg>
-        </div>
-        <button class="toggle-button">
-          <div class="toggle-circle"></div>
-        </button>
-        <div class="moon-wrapper">
-          <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-            <path
-              fill="currentColor"
-              d="M12 21Q8.25 21 5.625 18.375Q3 15.75 3 12Q3 8.25 5.625 5.625Q8.25 3 12 3Q12.35 3 12.688 3.025Q13.025 3.05 13.35 3.1Q12.325 3.825 11.713 4.987Q11.1 6.15 11.1 7.5Q11.1 9.75 12.675 11.325Q14.25 12.9 16.5 12.9Q17.875 12.9 19.025 12.287Q20.175 11.675 20.9 10.65Q20.95 10.975 20.975 11.312Q21 11.65 21 12Q21 15.75 18.375 18.375Q15.75 21 12 21ZM12 19Q14.2 19 15.95 17.788Q17.7 16.575 18.5 14.625Q18 14.75 17.5 14.825Q17 14.9 16.5 14.9Q13.425 14.9 11.262 12.738Q9.1 10.575 9.1 7.5Q9.1 7 9.175 6.5Q9.25 6 9.375 5.5Q7.425 6.3 6.213 8.05Q5 9.8 5 12Q5 14.9 7.05 16.95Q9.1 19 12 19ZM11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Q11.75 12.25 11.75 12.25Z"
-            />
-          </svg>
-        </div>
-      </div>
-
-      <div class="page-wrapper" asscroll>
-        <section class="hero">
-          <div class="hero-wrapper">
-            <!-- Intro Stuff -->
-            <div class="intro-text">Welcome to my portfolio!</div>
-            <div class="arrow-svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
-                <path
-                  fill="currentColor"
-                  d="M12 14.95q-.2 0-.375-.063-.175-.062-.325-.212L6.675 10.05q-.275-.275-.262-.688.012-.412.287-.687.275-.275.7-.275.425 0 .7.275l3.9 3.9 3.925-3.925q.275-.275.688-.263.412.013.687.288.275.275.275.7 0 .425-.275.7l-4.6 4.6q-.15.15-.325.212-.175.063-.375.063Z"
-                />
-              </svg>
-            </div>
-
-            <div class="hero-main">
-              <h1 class="hero-main-title">MUHAMMAD FAIZAN</h1>
-              <p class="hero-main-description">WEB DEVELOPER</p>
-            </div>
-
-            <div class="hero-second">
-              <p class="hero-second-subheading first-sub">MUHAMMAD FAIZAN</p>
-              <p class="hero-second-subheading second-sub">Portfolio</p>
-            </div>
-          </div>
-        </section>
-
-        <div class="first-move section-margin"></div>
-
-        <section class="first-section section left">
-          <div class="progress-wrapper progress-bar-wrapper-left">
-            <div class="progress-bar"></div>
-          </div>
-
-          <div class="section-intro-wrapper">
-            <h1 class="section-title">
-              <span class="section-title-text">About Me</span>
-              <div class="section-title-decoration styleOne"></div>
-              <div class="section-title-decoration styleTwo"></div>
-              <div class="section-title-decoration styleThree"></div>
-            </h1>
-            <span class="section-number">01</span>
-          </div>
-
-          <div class="section-detail-wrapper">
-            <!-- <h3 class="section-heading">Hello!</h3> -->
-            <p class="section-text">
-             I'm M Faizan, a Full-Stack Software Engineer and AI Developer passionate about building scalable web applications, autonomous AI agents, and immersive 3D digital experiences using Next.js, NestJS, Three.js, and GSAP. Currently working as a Software Engineer at Munexa Design engineering conversational AI workflows, while completing my Bachelor of Science in Computer Science at the University of Education, Lahore.
-            </p>
-            <p class="section-text">
-            I have a strong technical foundation in full-stack architecture, database design, and system performance. My experience ranges from engineering AI-powered systems—including the Punjab Police Automated Driving Test platform featured at the Punjab Transport Expo 2025—to delivering 15+ production applications for global clients. My goal is to bridge robust backend systems and AI automation with creative frontend innovation.
-            </p>
-            <p class="section-text">
-             Let's connect and explore opportunities to create extraordinary, high-impact solutions together!
-            </p>
-            <br />
-            <p class="section-text">
-              <strong>Location:</strong> Lahore, Punjab, Pakistan
-            </p>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <h1 id="education">EDUCATION</h1>
-            <br />
-            <br />
-            <br />
-            <h3>University of Education, Lahore</h3>
-            <br />
-            <h4>Bachelor of Computer Science, Computer and Information Sciences</h4>
-            <br />
-            <p>[ June 2023 - June 2027 ]</p>
-            <br />
-            <br />
-            <h3>KIPS College</h3>
-            <br />
-            <h4>High School Diploma</h4>
-            <br />
-            <br />
-            <h3>Ch. Rahmat Ali Memorial Trust Hospital</h3>
-            <br />
-            <h4>High School Diploma, Computational Science</h4>
-
-          </div>
-        </section>
-
-        <div class="second-move section-margin"></div>
-
-        <section class="second-section section right">
-          <div class="progress-wrapper progress-bar-wrapper-right">
-            <div class="progress-bar blue-background"></div>
-          </div>
-
-          <div class="section-intro-wrapper blue-text blue-border">
-            <h1 class="section-title blue-text blue-border">
-              <span class="section-title-text blue-text">My Projects</span>
-              <div class="section-title-decoration styleOne blue-border"></div>
-              <div class="section-title-decoration styleTwo blue-border"></div>
-              <div
-                class="section-title-decoration styleThree blue-background blue-border"
-              ></div>
-            </h1>
-            <span class="section-number blue-text">02</span>
-          </div>
-
-          <div class="section-detail-wrapper">
-            <!-- Project 0: AI Automatic Test Driving System -->
-            <h3 class="section-heading">AI Automatic Test Driving System</h3>
-            <p class="section-text">
-              An AI-based automatic driving test system where I designed the entire dashboard, integrated the printer with the car and system, integrated fingerprint authentication with the car and system, and managed the integrated database.
-            </p>
-            <br />
-            <picture>
-              <img src="/projects-videos/driving-test.jpg" width="500" alt="AI Driving Test System" />
-            </picture>
-            <br />
-            <br />
-            <p>
-              <a href="https://www.youtube.com/watch?v=yJV395NlWko" target="_blank">View Demo Video</a>
-            </p>
-            <br />
-            <br />
-
-            <!-- Project 1: Switch -->
-            <h3 class="section-heading">Switch</h3>
-            <p class="section-text">
-              A comprehensive system for managing mobile teachers, administrative web portal, and municipality web services. This full-stack application provides seamless coordination between different stakeholders.
-            </p>
-            <br />
-            <video controls width="500" preload="metadata">
-              <source src="/projects-videos/switch.mp4" type="video/mp4" />
-            </video>
-            <br />
-            <br />
-            <p>
-              <a href="https://preview--switch-mobile-teachers.lovable.app/" target="_blank">Mobile Teachers Portal</a> |
-              <a href="https://preview--switch-admin-web-26774.lovable.app/" target="_blank">Admin Web Portal</a> |
-              <a href="https://preview--switch-municipality-web.lovable.app/" target="_blank">Municipality Web</a>
-            </p>
-            <br />
-            <br />
-
-            <!-- Project 2: Landing Page (GSAP) -->
-            <h3 class="section-heading">Landing Page - Interactive Experience</h3>
-            <p class="section-text">
-              A stunning landing page featuring advanced GSAP animations and smooth scrolling effects. Built with modern web technologies to create an immersive user experience.
-            </p>
-            <br />
-            <video controls width="500" preload="metadata">
-              <source src="/projects-videos/landing%20page.mp4" type="video/mp4" />
-            </video>
-            <br />
-            <br />
-
-            <!-- Project 3: Redefine -->
-            <h3 class="section-heading">Redefine</h3>
-            <p class="section-text">
-              A modern web application showcasing creative design patterns and innovative UI/UX approaches. Features smooth animations and responsive design principles.
-            </p>
-            <br />
-            <video controls width="500" preload="metadata">
-              <source src="/projects-videos/redefine.mp4" type="video/mp4" />
-            </video>
-            <br />
-            <br />
-
-            <!-- Project 4: Old Portfolio -->
-            <h3 class="section-heading">Portfolio V1</h3>
-            <p class="section-text">
-              My previous portfolio showcasing my journey as a developer. Features 3D elements and creative interactions built with Three.js.
-            </p>
-            <br />
-            <video controls width="500" preload="metadata">
-              <source src="/projects-videos/old%20portfoio.mp4" type="video/mp4" />
-            </video>
-            <br />
-            <br />
-
-            <!-- Project 5: GSAP Landing Page -->
-            <h3 class="section-heading">GSAP Animation Showcase</h3>
-            <p class="section-text">
-              An experimental project exploring advanced GSAP animation techniques and interactive storytelling through web animations.
-            </p>
-            <br />
-            <video controls width="500" preload="metadata">
-              <source src="/projects-videos/gsap.mp4" type="video/mp4" />
-            </video>
-            <br />
-            <br />
-
-            <!-- Project 6: Flip Inventory -->
-            <h3 class="section-heading">Flip Inventory</h3>
-            <p class="section-text">
-              A comprehensive inventory management system with real-time updates and intuitive user interface. Built for efficient product tracking and management.
-            </p>
-            <br />
-            <video controls width="500" preload="metadata">
-              <source src="/projects-videos/Flip%20inventory.mp4" type="video/mp4" />
-            </video>
-            <br />
-            <br />
-            <p>
-              <a href="https://preview--flipventory-master.lovable.app/auth?returnTo=%2F&tab=signin" target="_blank">View Live Demo</a>
-            </p>
-            <br />
-            <br />
-
-            <!-- Project 7: Subcontractor -->
-            <h3 class="section-heading">Subcontractor Management</h3>
-            <p class="section-text">
-              A project management tool designed for coordinating subcontractors and managing project workflows efficiently.
-            </p>
-            <br />
-            <video controls width="500" preload="metadata">
-              <source src="/projects-videos/subcontractor.mp4" type="video/mp4" />
-            </video>
-            <br />
-            <br />
-
-            <!-- Project 8: Killswitch -->
-            <h3 class="section-heading">Killswitch</h3>
-            <p class="section-text">
-              An innovative UI rendition kit featuring modern design components and interactive elements. Built with cutting-edge web technologies.
-            </p>
-            <br />
-            <picture>
-              <img src="/projects-videos/killswitch.png" width="500" alt="Killswitch Project" />
-            </picture>
-            <br />
-            <br />
-            <p>
-              <a href="https://preview--figma-ui-rendition-kit.lovable.app/?__lovable_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiaURRb3o0M3VKY1NqZnFaYlR4WloyTVRjb2pxMSIsInByb2plY3RfaWQiOiI0YjVjYzQ5My02YmQ0LTRhNzMtYTJlZi0zNWFlYTMyMzY4YmEiLCJub25jZSI6IjRhZDUyM2FkNTljNmE1OTM1MTRlYmI1ZjUxYWM2MzVkIiwiaXNzIjoibG92YWJsZS1hcGkiLCJzdWIiOiI0YjVjYzQ5My02YmQ0LTRhNzMtYTJlZi0zNWFlYTMyMzY4YmEiLCJhdWQiOlsibG92YWJsZS1hcHAiXSwiZXhwIjoxNzY1MTE5OTI5LCJuYmYiOjE3NjQ1MTUxMjksImlhdCI6MTc2NDUxNTEyOX0.KR82UBKUB9BtNWsg0-1rUplExh0ZWBXWCBrJR7UKMkE" target="_blank">View Live Demo</a>
-            </p>
-          </div>
-        </section>
-
-        <div class="third-move section-margin"></div>
-
-        <section class="third-section section left">
-          <div class="progress-wrapper progress-bar-wrapper-left">
-            <div class="progress-bar green-background"></div>
-          </div>
-
-          <div class="section-intro-wrapper green-text green-border">
-            <h1 class="section-title green-text green-border">
-              <span class="section-title-text green-text">Work Experience</span>
-              <div class="section-title-decoration styleOne green-border"></div>
-              <div class="section-title-decoration styleTwo green-border"></div>
-              <div
-                class="section-title-decoration styleThree green-background green-border"
-              ></div>
-            </h1>
-            <span class="section-number green-text">03</span>
-          </div>
-
-          <div class="section-detail-wrapper">
-            <div class="experience-entry">
-              <h3>Software Engineer</h3>
-              <h4>Munexa Design · Contract</h4>
-              <p><strong>Jun 2026 - Present · 3 mos</strong></p>  
-              <ul class="section-text">
-                <li>Designed and developed a voice + text AI agent that goes beyond conversational responses by executing custom actions within the application.</li>
-                <li>Built an AI-driven workflow that allows users to provide information conversationally and automatically populates web forms based on the collected details.</li>
-              </ul>
-            </div>
-<br>
-            <div class="experience-entry">
-              <h3>Full Stack Engineer</h3>
-              <h4>Dexterz Technologies · Part-time</h4>
-              <p><strong>Aug 2024 - May 2026 · 1 yr 10 mos</strong></p>
-              <ul class="section-text">
-                <li>Built and maintained 15+ production full-stack applications using React.js, Node.js, Express.js, and Supabase, delivering responsive UI components, REST API endpoints, and database workflows across client-facing and internal platforms.</li>
-                <li>Contributed to a government-level AI-based automatic driving test system for Punjab Police, architected the admin dashboard, integrated printer and fingerprint authentication hardware, and supported deployment across multiple active test stations.</li>
-                <li>Managed Supabase/PostgreSQL database schema and workflows for the driving test platform, ensuring real-time data integrity between hardware sensor inputs, dashboard records, and DLIMS reporting.</li>
-                <li>Developed and delivered international full-stack projects, including a multi-portal education platform (Switch, Israel) and a real-time inventory management dashboard (Flip Inventory, UK), utilizing React.js, Node.js, Express.js, and Supabase.</li>
-              </ul>
-            </div>
-<br>
-
-            <div class="experience-entry">
-              <h3>Web Developer</h3>
-              <h4>Prodigy InfoTech · Internship</h4>
-              <p><strong>May 2024 · 1 mo</strong></p>
-              <p class="section-text">Developed front-end components and responsive UI layouts using HTML5, CSS3, and JavaScript, applying mobile-first responsive design best practices. Improved visual consistency across delivered web pages and contributed to interface design and layout optimization.</p>
-            </div>
-<br>
-
-            <div class="experience-entry">
-              <h3>Intern</h3>
-              <h4>Aptech Lahore · Internship</h4>
-              <p><strong>Apr 2023 - May 2024 · 1 yr 2 mos</strong></p>
-              <p class="section-text">Completed 13 months of structured full-stack development training, building 6+ projects covering HTML5, CSS3, JavaScript, responsive UI design, MySQL, MongoDB, REST API design, and CRUD operations. Strengthened debugging, problem-solving, and code review skills through intensive project-based assignments and hands-on development exercises.</p>
-            </div>
-          </div>
-        </section>
-
-        <div class="second-move section-margin"></div>
-
-        <section class="second-section section right">
-          <div class="progress-wrapper progress-bar-wrapper-right">
-            <div class="progress-bar blue-background"></div>
-          </div>
-
-          <div class="section-intro-wrapper blue-text blue-border">
-            <h1 class="section-title blue-text blue-border">
-              <span class="section-title-text blue-text">CONTACT</span>
-              <div class="section-title-decoration styleOne blue-border"></div>
-              <div class="section-title-decoration styleTwo blue-border"></div>
-              <div
-                class="section-title-decoration styleThree blue-background blue-border"
-              ></div>
-            </h1>
-            <span class="section-number blue-text">04</span>
-          </div>
-
-          <div class="section-detail-wrapper">
-            <h3 class="section-heading">Contact Details</h3>
-            <p class="section-text">
-              <strong>Phone:</strong> +923174978058<br />
-              <strong>Email:</strong> muhammadfaizanali18@gmail.com<br />
-              <strong>Location:</strong> Lahore, Punjab, Pakistan
-            </p>
-            <br />
-            <h3 class="section-heading">LinkedIn</h3>
-            <p class="section-text">
-              Let's connect on LinkedIn! I'm always open to discussing new opportunities, collaborations, and sharing insights about web development and creative design.
-            </p>
-            <br />
-            <p>
-              <a href="https://www.linkedin.com/in/muhammadfaizan-60518a290" target="_blank">
-                <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn" />
-              </a>
-            </p>
-            <h3 class="section-heading">Github</h3>
-            <p class="section-text">
-              Check out my GitHub profile to see my latest projects, contributions, and code. I'm passionate about building innovative web applications and sharing knowledge with the developer community.
-            </p>
-            <br />
-            <p>
-              <a href="https://github.com/MuhammadFaizan-prog" target="_blank">
-                <img src="https://img.shields.io/badge/Github-12100E?logo=github&logoColor=white" alt="GitHub" />
-              </a>
-            </p>
-          </div>
-
-        </section>
-        <footer class="footer">
-          <span class="footer__copyright"
-            >Copyright &copy; 2025 - Muhammad Faizan</span
-          >
-        </footer><br /><br /><br />
-      </div>
+    <div class="card">
+      <div class="k"><span>Israel</span><span>Education</span></div>
+      <h3>Switch</h3>
+      <p>A three-portal education platform: a mobile app for teachers, an admin dashboard, and municipality services, all with role-based access and real-time sync between them.</p>
+      <span class="tag">React · Express · Supabase · RBAC</span>
     </div>
-    <script type="module" src="/main.js"></script>
-  </body>
-</html>
+    <div class="card">
+      <div class="k"><span>United Kingdom</span><span>Inventory</span></div>
+      <h3>Flip Inventory</h3>
+      <p>A production inventory dashboard with real-time stock updates and full CRUD, built for warehouse teams.</p>
+      <span class="tag">React · Node.js · Supabase Realtime</span>
+    </div>
+    <a class="card" href="https://optiskin.vercel.app" target="_blank" rel="noopener">
+      <div class="k"><span>United States</span><span>Website ↗</span></div>
+      <h3>Optiskin &amp; NYCDentac</h3>
+      <p>Conversion-focused websites for a US medical aesthetics brand and a New York dental group, from design to deployment.</p>
+      <span class="tag">React · Tailwind · Framer</span>
+    </a>
+    <a class="card" href="https://clear-face-mu.vercel.app" target="_blank" rel="noopener">
+      <div class="k"><span>Wellness</span><span>Website ↗</span></div>
+      <h3>Clear Face</h3>
+      <p>A wellness web app I designed in Figma and shipped to production on my own: services, testimonials, FAQs and contact flows.</p>
+      <span class="tag">React · Tailwind · Figma · Supabase</span>
+    </a>
+    <a class="card" href="https://nutrisole-frontend.vercel.app" target="_blank" rel="noopener">
+      <div class="k"><span>Final year project</span><span>Prototype ↗</span></div>
+      <h3>NutriSole</h3>
+      <p>A health app that combines nutrition tracking with glucose meter data over Bluetooth, built with React Native and Expo.</p>
+      <span class="tag">React Native · Expo · BLE</span>
+    </a>
+  </div>
+</section>
 
+<section id="experience" class="reveal">
+  <h2>Where I have been</h2>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-date"><span class="now">Jun 2026, now</span></div><div><h3>Software Engineer<small>Munexa Design, Lahore</small></h3><p>Text and voice AI agents with custom action execution, and an agent that completes web forms from conversation.</p></div></div>
+    <div class="tl-item"><div class="tl-date">Aug 2024 to May 2026</div><div><h3>Full Stack Engineer<small>Dexterz Technologies, Lahore</small></h3><p>15+ production apps. Led the admin dashboard and hardware integration for the Punjab Police AI driving test system. Fixed production bugs and tuned React and query performance across live releases.</p></div></div>
+    <div class="tl-item"><div class="tl-date">May to Jun 2024</div><div><h3>Web Developer<small>Prodigy InfoTech</small></h3><p>Responsive front-end components and layouts, mobile first.</p></div></div>
+    <div class="tl-item"><div class="tl-date">Apr 2023 to May 2024</div><div><h3>Full Stack Development Intern<small>Aptech Lahore</small></h3><p>13 months of full-stack training and 6+ projects across JavaScript, MySQL, MongoDB and REST APIs.</p></div></div>
+    <div class="tl-item"><div class="tl-date">2023, ongoing</div><div><h3>BS Computer Science<small>University of Education, Lahore</small></h3><p>Data structures and algorithms, databases, OOP, software engineering, networks.</p></div></div>
+  </div>
+</section>
+
+<section id="stack" class="reveal stack">
+  <h2>What I reach for</h2>
+  <h4>ai &amp; agentic ai</h4><div class="chips"><span>LLMs</span><span>OpenAI API</span><span>LangChain</span><span>LangGraph</span><span>RAG</span><span>Embeddings</span><span>pgvector</span><span>ChromaDB</span><span>MCP</span><span>Tool calling</span><span>Voice agents (STT/TTS)</span><span>Prompt engineering</span></div>
+  <h4>frontend &amp; mobile</h4><div class="chips"><span>React</span><span>Next.js</span><span>React Native</span><span>TypeScript</span><span>Tailwind</span><span>Redux Toolkit</span><span>ShadCN</span><span>Three.js</span><span>GSAP</span><span>Framer Motion</span></div>
+  <h4>backend &amp; data</h4><div class="chips"><span>Node.js</span><span>Express</span><span>Nest.js</span><span>Python</span><span>FastAPI</span><span>PostgreSQL</span><span>MongoDB</span><span>Supabase</span><span>Redis</span><span>WebSockets</span><span>Microservices</span></div>
+  <h4>infra &amp; testing</h4><div class="chips"><span>Docker</span><span>AWS</span><span>Google Cloud</span><span>Vercel</span><span>GitHub Actions</span><span>Linux</span><span>Jest</span><span>Pytest</span><span>Postman</span></div>
+</section>
+
+<section id="github" class="reveal">
+  <h2>GitHub</h2>
+  <p class="lede">Pulled live from GitHub every time this page loads.</p>
+  <div class="gh-stats"><div><b id="gh-repos">59</b><span>public repos</span></div><div><b id="gh-contrib">–</b><span>contributions, last year</span></div></div>
+  <div class="cal-wrap"><div class="cal-head">contribution activity</div><div id="cal"></div></div>
+  <div class="repos" id="repos"></div>
+  <p style="margin-top:18px"><a class="btn" href="https://github.com/MuhammadFaizan-prog" target="_blank" rel="noopener">View full profile →</a></p>
+</section>
+
+<section class="contact reveal">
+  <h2>Say hi</h2>
+  <p class="lede">Hiring for Full Stack or Agentic AI work, have a freelance project, or want to talk agents? Send the details. Remote, hybrid or on-site in Lahore.</p>
+  <a class="mail" href="mailto:muhammadfaizanali18@gmail.com">muhammadfaizanali18@gmail.com</a>
+  <div class="btns" style="margin-top:22px">
+    <a class="btn" href="https://www.linkedin.com/in/muhammad-faizan-60518a290/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn" href="https://www.upwork.com/freelancers/~01ceaba9e7052a9c9a" target="_blank" rel="noopener">Hire me on Upwork ↗</a>
+  </div>
+  <p style="margin-top:28px"><span class="hand">see you around, Faizan</span></p>
+</section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 Muhammad Faizan · Lahore</span>
+  <span><a href="mailto:muhammadfaizanali18@gmail.com">Email</a> · <a href="https://github.com/MuhammadFaizan-prog">GitHub</a> · <a href="https://www.linkedin.com/in/muhammad-faizan-60518a290/">LinkedIn</a> · <a href="https://www.upwork.com/freelancers/~01ceaba9e7052a9c9a">Upwork</a></span>
+</div></footer>
+<script type="module" src="/main.js"></script>
+</body></html>
